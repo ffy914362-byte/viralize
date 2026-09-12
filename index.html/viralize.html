@@ -1,0 +1,679 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+    <title>Viralize | Marketing Digital</title>
+
+    <style>
+        * {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+            font-family: Arial, sans-serif;
+            scroll-behavior: smooth;
+        }
+
+        body {
+            background: #080808;
+            color: white;
+        }
+
+        /* MENU */
+
+        header {
+            position: fixed;
+            top: 0;
+            width: 100%;
+            padding: 20px 8%;
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+            background: rgba(8, 8, 8, 0.95);
+            border-bottom: 1px solid #222;
+            z-index: 1000;
+        }
+
+        .logo img {
+    width: 150px;
+    height: auto;
+}
+        }
+
+        .logo span {
+            color: #888;
+        }
+
+        nav a {
+            color: #ddd;
+            text-decoration: none;
+            margin-left: 25px;
+            transition: 0.3s;
+        }
+
+        nav a:hover {
+            color: white;
+        }
+
+        /* INÍCIO */
+
+        .inicio {
+            min-height: 100vh;
+            display: flex;
+            align-items: center;
+            padding: 120px 8% 60px;
+            background:
+                radial-gradient(circle at 80% 50%, #252525 0%, #080808 40%);
+        }
+
+        .conteudo {
+            max-width: 750px;
+        }
+
+        .tag {
+            color: #999;
+            letter-spacing: 4px;
+            text-transform: uppercase;
+            margin-bottom: 20px;
+        }
+
+        .inicio h1 {
+            font-size: 65px;
+            line-height: 1.05;
+            margin-bottom: 25px;
+        }
+
+        .inicio h1 span {
+            color: #777;
+        }
+
+        .inicio p {
+            color: #aaa;
+            font-size: 20px;
+            line-height: 1.7;
+            margin-bottom: 35px;
+        }
+
+        .botao {
+            display: inline-block;
+            padding: 16px 28px;
+            background: #eee;
+            color: #080808;
+            text-decoration: none;
+            font-weight: bold;
+            border-radius: 8px;
+            transition: 0.3s;
+        }
+
+        .botao:hover {
+            transform: translateY(-4px);
+            background: white;
+        }
+
+        /* SEÇÕES */
+
+        section {
+            padding: 100px 8%;
+        }
+
+        .titulo {
+            text-align: center;
+            margin-bottom: 55px;
+        }
+
+        .titulo h2 {
+            font-size: 42px;
+            margin-bottom: 12px;
+        }
+
+        .titulo p {
+            color: #888;
+        }
+
+        /* SERVIÇOS */
+
+        .servicos {
+            background: #101010;
+        }
+
+        .cards {
+            display: grid;
+            grid-template-columns: repeat(4, 1fr);
+            gap: 20px;
+        }
+
+        .card {
+            background: #171717;
+            border: 1px solid #292929;
+            padding: 30px;
+            border-radius: 14px;
+            transition: 0.3s;
+        }
+
+        .card:hover {
+            transform: translateY(-8px);
+            border-color: #777;
+        }
+
+        .icone {
+            font-size: 35px;
+            margin-bottom: 20px;
+        }
+
+        .card h3 {
+            margin-bottom: 15px;
+        }
+
+        .card p {
+            color: #999;
+            line-height: 1.6;
+        }
+
+        /* SOBRE */
+
+        .sobre {
+            text-align: center;
+        }
+
+        .sobre-conteudo {
+            max-width: 800px;
+            margin: auto;
+        }
+
+        .sobre p {
+            color: #aaa;
+            font-size: 19px;
+            line-height: 1.8;
+        }
+
+        /* PORTFÓLIO */
+
+        .portfolio {
+            background: #101010;
+        }
+
+        .projetos {
+            display: grid;
+            grid-template-columns: repeat(3, 1fr);
+            gap: 20px;
+        }
+
+        .projeto {
+            height: 230px;
+            background: linear-gradient(135deg, #252525, #0c0c0c);
+            border: 1px solid #333;
+            border-radius: 15px;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            text-align: center;
+            transition: 0.3s;
+        }
+
+        .projeto:hover {
+            transform: scale(1.03);
+        }
+
+        .projeto h3 {
+            font-size: 24px;
+        }
+
+        .projeto p {
+            color: #888;
+            margin-top: 8px;
+        }
+
+        /* DIFERENCIAIS */
+
+        .diferenciais {
+            display: grid;
+            grid-template-columns: repeat(3, 1fr);
+            gap: 20px;
+            text-align: center;
+        }
+
+        .diferencial {
+            padding: 35px;
+        }
+
+        .diferencial h3 {
+            margin: 15px 0;
+        }
+
+        .diferencial p {
+            color: #999;
+            line-height: 1.6;
+        }
+
+        /* CONTATO */
+
+        .contato {
+            background: #111;
+            text-align: center;
+        }
+
+        .contato p {
+            color: #aaa;
+            margin: 20px auto 30px;
+            max-width: 600px;
+            line-height: 1.6;
+        }
+
+        .whatsapp {
+            display: inline-block;
+            padding: 16px 30px;
+            background: #eee;
+            color: #111;
+            text-decoration: none;
+            border-radius: 8px;
+            font-weight: bold;
+        }
+
+        /* RODAPÉ */
+
+        footer {
+            text-align: center;
+            padding: 30px;
+            border-top: 1px solid #222;
+            color: #666;
+        }
+
+        /* RESPONSIVO */
+
+        @media (max-width: 900px) {
+
+            .cards {
+                grid-template-columns: repeat(2, 1fr);
+            }
+
+            .projetos {
+                grid-template-columns: 1fr;
+            }
+
+            .diferenciais {
+                grid-template-columns: 1fr;
+            }
+
+            .inicio h1 {
+                font-size: 48px;
+            }
+        }
+
+        @media (max-width: 600px) {
+
+            header {
+                padding: 18px 5%;
+            }
+
+            nav {
+                display: none;
+            }
+
+            section {
+                padding: 80px 5%;
+            }
+
+            .cards {
+                grid-template-columns: 1fr;
+            }
+
+            .inicio h1 {
+                font-size: 40px;
+            }
+        }
+   .formulario {
+    max-width 650px;
+    margin auto;
+}
+
+.formulario form {
+    display flex;
+    flex-direction column;
+    gap 15px;
+}
+
+.formulario input,
+.formulario textarea {
+    width 100%;
+    padding 17px;
+    background #181818;
+    border 1px solid #333;
+    border-radius 8px;
+    color white;
+    font-size 16px;
+    outline none;
+}
+
+.formulario inputfocus,
+.formulario textareafocus {
+    border-color #888;
+}
+
+.formulario textarea {
+    resize vertical;
+}
+
+.formulario button {
+    padding 17px;
+    background #eee;
+    color #111;
+    border none;
+    border-radius 8px;
+    font-size 16px;
+    font-weight bold;
+    cursor pointer;
+    transition 0.3s;
+}
+
+.formulario buttonhover {
+    background white;
+    transform translateY(-3px);
+} </style>
+</head>
+
+<body>
+
+    <!-- MENU -->
+
+    <header>
+
+        <div class="logo">
+    <img src="logo.png" alt="Viralize Marketing Digital">
+</div>
+
+        <nav>
+            <a href="#inicio">Início</a>
+            <a href="#servicos">Serviços</a>
+            <a href="#sobre">Sobre</a>
+            <a href="#portfolio">Portfólio</a>
+            <a href="#contato">Contato</a>
+        </nav>
+
+    </header>
+
+
+    <!-- INÍCIO -->
+
+    <section class="inicio" id="inicio">
+
+        <div class="conteudo">
+
+            <div class="tag">
+                Marketing Digital
+            </div>
+
+            <h1>
+                Sua empresa no digital,
+                <span>mais forte.</span>
+            </h1>
+
+            <p>
+                A Viralize cria sites, conteúdos e estratégias
+                para ajudar sua empresa a crescer e conquistar
+                mais presença na internet.
+            </p>
+
+            <a href="#servicos" class="botao">
+                Conheça nossos serviços
+            </a>
+
+        </div>
+
+    </section>
+
+
+    <!-- SERVIÇOS -->
+
+    <section class="servicos" id="servicos">
+
+        <div class="titulo">
+
+            <h2>Nossos Serviços</h2>
+
+            <p>
+                Soluções digitais para colocar sua empresa em destaque.
+            </p>
+
+        </div>
+
+
+        <div class="cards">
+
+            <div class="card">
+
+                <div class="icone">🌐</div>
+
+                <h3>Criação de Sites</h3>
+
+                <p>
+                    Criamos sites modernos, rápidos e profissionais
+                    para apresentar sua empresa na internet.
+                </p>
+
+            </div>
+
+
+            <div class="card">
+
+                <div class="icone">📱</div>
+
+                <h3>Redes Sociais</h3>
+
+                <p>
+                    Estratégias para melhorar o perfil da sua empresa
+                    e aumentar sua presença nas redes sociais.
+                </p>
+
+            </div>
+
+
+            <div class="card">
+
+                <div class="icone">🎥</div>
+
+                <h3>Criação de Conteúdo</h3>
+
+                <p>
+                    Vídeos, Reels, posts e ideias criativas
+                    para chamar a atenção do seu público.
+                </p>
+
+            </div>
+
+
+            <div class="card">
+
+                <div class="icone">📈</div>
+
+                <h3>Estratégias</h3>
+
+                <p>
+                    Planejamento digital pensado para os objetivos
+                    e o público da sua empresa.
+                </p>
+
+            </div>
+
+        </div>
+
+    </section>
+
+
+    <!-- SOBRE -->
+
+    <section class="sobre" id="sobre">
+
+        <div class="titulo">
+
+            <h2>Sobre a Viralize</h2>
+
+        </div>
+
+        <div class="sobre-conteudo">
+
+            <p>
+                A Viralize nasceu com o objetivo de ajudar empresas
+                a construírem uma presença profissional na internet.
+                Unimos criatividade, tecnologia e estratégia para
+                transformar negócios em marcas mais fortes no digital.
+            </p>
+
+        </div>
+
+    </section>
+
+
+    <!-- PORTFÓLIO -->
+
+    <section class="portfolio" id="portfolio">
+
+        <div class="titulo">
+
+            <h2>Nosso Portfólio</h2>
+
+            <p>
+                Projetos que podemos desenvolver para sua empresa.
+            </p>
+
+        </div>
+
+
+        <div class="projetos">
+
+            <div class="projeto">
+
+                <div>
+                    <h3>Sites</h3>
+                    <p>Sites profissionais</p>
+                </div>
+
+            </div>
+
+
+            <div class="projeto">
+
+                <div>
+                    <h3>Redes Sociais</h3>
+                    <p>Conteúdo estratégico</p>
+                </div>
+
+            </div>
+
+
+            <div class="projeto">
+
+                <div>
+                    <h3>Identidade Visual</h3>
+                    <p>Marcas mais profissionais</p>
+                </div>
+
+            </div>
+
+        </div>
+
+    </section>
+
+
+    <!-- DIFERENCIAIS -->
+
+    <section>
+
+        <div class="titulo">
+
+            <h2>Por que a Viralize?</h2>
+
+        </div>
+
+
+        <div class="diferenciais">
+
+            <div class="diferencial">
+
+                <div class="icone">🎯</div>
+
+                <h3>Estratégia</h3>
+
+                <p>
+                    Cada negócio possui objetivos diferentes.
+                    Pensamos no público e na necessidade da empresa.
+                </p>
+
+            </div>
+
+
+            <div class="diferencial">
+
+                <div class="icone">💡</div>
+
+                <h3>Criatividade</h3>
+
+                <p>
+                    Criamos conteúdos que procuram chamar
+                    atenção e gerar interesse.
+                </p>
+
+            </div>
+
+
+            <div class="diferencial">
+
+                <div class="icone">🚀</div>
+
+                <h3>Crescimento</h3>
+
+                <p>
+                    Nosso objetivo é ajudar sua empresa a
+                    construir uma presença digital mais forte.
+                </p>
+
+            </div>
+
+        </div>
+
+    </section>
+
+
+    <!-- CONTATO -->
+
+    <section class="contato" id="contato">
+
+        <div class="titulo">
+
+            <h2>Vamos trabalhar juntos?</h2>
+
+        </div>
+
+        <p>
+            Quer levar sua empresa para outro nível no digital?
+            Entre em contato com a Viralize e conheça nossas soluções.
+        </p>
+
+        <!-- TROQUE O LINK PELO SEU WHATSAPP -->
+
+        <a
+            href="https://wa.me/71998341188"
+            class="whatsapp"
+            target="_blank">
+
+            Falar com a Viralize
+
+        </a>
+
+    </section>
+
+
+    <!-- RODAPÉ -->
+
+    <footer>
+
+        VIRALIZE © 2026
+        <br>
+        Marketing Digital
+
+    </footer>
+
+</body>
+
+</html>
